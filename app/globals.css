@@ -30,18 +30,12 @@ html:not([data-scroll="0"]) .ttty {
 }
 
 .bg-header {
-  background: linear-gradient(
-    120.3deg,
-    #d5f2ff 31.56%,
-    rgba(255, 255, 255, 0) 94.83%
-  );
+  background-image: url("https://res.cloudinary.com/dymv3cmhq/image/upload/v1717865347/dummy/v7z7tp6mebydvqjlq41p.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .bg-navbar {
-  background: linear-gradient(
-    120.3deg,
-    #d5f2ff 36.56%,
-    rgba(255, 255, 255, 0) 122.83%
-  );
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .w-270px {
