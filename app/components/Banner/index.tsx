@@ -5,15 +5,15 @@ const Banner = () => {
     <div className="bg-header">
       <br />
 
-      <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
-        <div className="grid gap-4  grid-cols-1 lg:grid-cols-12">
+      <div className="mx-auto max-w-6xl pt-20 sm:pb-24 px-6">
+        <div className="grid gap-4 grid-cols-1 lg:grid-cols-12">
           <div className="col-span-12 flex flex-col justify-evenly relative">
             <Image
               src="/assets/banner/star.svg"
               alt="star-image"
               width={95}
               height={97}
-              className="absolute top-[-74px] right-[51px]"
+              className="absolute top-[-74px] right-[80px]"
             />
 
             <h1 className=" text-white  text-4xl md:text-85xl text-center lg:text-start font-semibold lh-133 pt-5">
