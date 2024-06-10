@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { Luckiest_Guy } from "next/font/google";
+
+const lucky = Luckiest_Guy({ weight: "400", subsets: ["latin"] });
+
 interface links {
   link: string;
 }
@@ -31,13 +35,13 @@ const socialLinks: socialLinks[] = [
 
 const links: links[] = [
   {
-    link: "Product",
+    link: "Produk",
   },
   {
-    link: "Pricing",
+    link: "Berita",
   },
   {
-    link: "Features",
+    link: "Kontak",
   },
 ];
 
@@ -50,12 +54,12 @@ const footer = () => {
 
           <div className="sm:col-span-6 lg:col-span-3">
             <div className="flex flex-shrink-0 items-center border-right">
-              <Image
-                src="/assets/footer/logo.svg"
-                alt="logo"
-                width={214}
-                height={66}
-              />
+              <h1
+                style={{ fontSize: "30px", color: "#FFFFFF" }}
+                className={lucky.className}
+              >
+                DINA CAKE
+              </h1>
             </div>
           </div>
 
@@ -97,7 +101,7 @@ const footer = () => {
 
         <div className="pt-12 pb-10 lg:flex items-center justify-between border-t border-t-white border-opacity-30">
           <h4 className="text-lg text-center md:text-start font-normal text-white opacity-60">
-            @2023.Paidin.All rights reserved
+            @2024. YudiRunatMasneno
           </h4>
           <div className="flex gap-5 mt-6 md:mt-0 justify-center md:justify-start">
             <h4 className="opacity-60 text-lg font-normal text-white">

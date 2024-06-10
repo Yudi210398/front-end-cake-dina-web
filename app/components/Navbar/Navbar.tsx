@@ -9,12 +9,13 @@ import Registerdialog from "./Registerdialog";
 import Image from "next/image";
 
 import { Sigmar_One } from "next/font/google";
-import { Luckiest_Guy } from "next/font/google";
 
 const sigmar = Sigmar_One({
   weight: "400",
   subsets: ["latin"],
 });
+
+import { Luckiest_Guy } from "next/font/google";
 
 const lucky = Luckiest_Guy({ weight: "400", subsets: ["latin"] });
 
@@ -65,7 +66,7 @@ const Navbar = () => {
                         item.current
                           ? " text-black hover:opacity-75"
                           : "hover:text-black hover:opacity-75",
-                        "px-3 py-4 text-lg font-normal text-black space-links",
+                        "px-3 py-4 text-lg font-normal text-black space-links"
                       )}
                       aria-current={item.href ? "page" : undefined}
                     >
