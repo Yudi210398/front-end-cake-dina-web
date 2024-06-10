@@ -44,19 +44,9 @@ const Navbar = () => {
         <div className="mx-auto max-w-7xl px-6 md:py-4 lg:px-8">
           <div className="relative flex h-20 items-center justify-between">
             <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
-              {/* LOGO */}
-
               <div className="flex flex-shrink-0 items-center">
-                <Image
-                  className="block h-12 w-40 lg:hidden"
-                  src={"/assets/logo/logo.svg"}
-                  alt="paidin-logo"
-                  width={100}
-                  height={100}
-                />
-
                 <h1
-                  style={{ fontSize: "30px", color: "#008080" }}
+                  style={{ fontSize: "30px", color: "#2974ae" }}
                   className={lucky.className}
                 >
                   DINA CAKE

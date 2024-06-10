@@ -11,9 +11,6 @@ export default function Home() {
       <Banner />
       <People />
       <Features />
-      <Business />
-      <Payment />
-      <Pricing />
     </main>
   );
 }

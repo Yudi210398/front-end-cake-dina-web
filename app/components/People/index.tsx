@@ -13,7 +13,7 @@ const People = () => {
           className=" mx-auto w-20  border-1 -mt-2"
         />
 
-        <div className="grid grid-cols-3 gap-10 mt-20  ">
+        <div className="grid gap-10 grid-cols-2 lg:gap-10 mt-20 lg:grid-cols-3">
           <div className=" bg-black-500 aspect-square rounded-lg  justify-center">
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
