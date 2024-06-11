@@ -10,7 +10,7 @@ const People = () => {
         </h3>
         <hr
           style={{ border: "1px solid navy", color: "blue" }}
-          className=" mx-auto w-20  border-1 -mt-2"
+          className=" mx-auto w-20    border-1 -mt-2"
         />
 
         <div className="grid gap-10 grid-cols-2 lg:gap-10 mt-20 lg:grid-cols-3">
