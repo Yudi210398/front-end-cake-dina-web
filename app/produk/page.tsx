@@ -1,8 +1,25 @@
 import Image from "next/image";
-import Link from "next/link";
+
+import { Archivo_Black } from "next/font/google";
+
+const arvhivo = Archivo_Black({ weight: "400", subsets: ["latin"] });
+
 export default function Produk() {
   return (
-    <div className="mx-auto mt-10 max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 justify-center">
+    <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 justify-center">
+      <hr
+        style={{ width: "100px", border: "1px solid navy", color: "blue" }}
+        className=" mt-3 lg:col-span-1"
+      />
+      <div className="-mt-3">
+        <span
+          style={{ color: "#113065" }}
+          className={`ml-32 mb-20 flex ${arvhivo.className}`}
+        >
+          SEMUA KUE
+        </span>
+      </div>
+
       <div className="grid gap-10 grid-cols-2 lg:gap-10 mt-20 lg:grid-cols-3">
         <div className=" bg-black-500 aspect-square rounded-lg  justify-center">
           <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">

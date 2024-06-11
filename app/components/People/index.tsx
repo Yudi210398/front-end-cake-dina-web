@@ -145,7 +145,7 @@ const People = () => {
 
         <div className="grid gap-10 grid-cols-2 lg:gap-10 mt-10 lg:grid-cols-1">
           <Link
-            href="#"
+            href="/produk"
             className="font-medium text-blue-600 dark:text-blue-500 hover:underline text-center"
           >
             Semua Kue
