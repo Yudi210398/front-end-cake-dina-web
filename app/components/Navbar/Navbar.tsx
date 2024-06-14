@@ -7,7 +7,6 @@ import Drawerdata from "./Drawerdata";
 import Signdialog from "./Signdialog";
 import Registerdialog from "./Registerdialog";
 import Image from "next/image";
-
 import { Sigmar_One } from "next/font/google";
 
 const sigmar = Sigmar_One({
@@ -16,6 +15,7 @@ const sigmar = Sigmar_One({
 });
 
 import { Luckiest_Guy } from "next/font/google";
+import { usePathname } from "next/navigation";
 
 const lucky = Luckiest_Guy({ weight: "400", subsets: ["latin"] });
 
@@ -26,8 +26,8 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: "Beranda", href: "#product", current: true },
-  { name: "Produk", href: "#pricing", current: false },
+  { name: "Beranda", href: "/", current: true },
+  { name: "Produk", href: "/produk", current: false },
   { name: "Berita", href: "#features", current: false },
   { name: "Kontak", href: "#features", current: false },
 ];
@@ -37,6 +37,8 @@ function classNames(...classes: string[]) {
 }
 
 const Navbar = () => {
+  const navActice = usePathname();
+  console.log(navActice, `kcoak`);
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -66,11 +68,19 @@ const Navbar = () => {
                         item.current
                           ? " text-black hover:opacity-75"
                           : "hover:text-black hover:opacity-75",
-                        "px-3 py-4 text-lg font-normal text-black space-links"
+                        "px-3 py-4 text-lg font-normal text-black space-links",
                       )}
                       aria-current={item.href ? "page" : undefined}
                     >
                       {item.name}
+                      {navActice === item.href && (
+                        <hr
+                          style={{
+                            border: "1px solid black",
+                            transitionDelay: "2s",
+                          }}
+                        />
+                      )}
                     </Link>
                   ))}
                 </div>

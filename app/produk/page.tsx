@@ -4,6 +4,22 @@ import { Archivo_Black } from "next/font/google";
 
 const arvhivo = Archivo_Black({ weight: "400", subsets: ["latin"] });
 
+enum Category {
+  KUE_KERING = "KUE_KERING",
+  KUE_BASAH = "KUE_BASAH",
+}
+
+interface Datakue {
+  namaKue: string;
+  quantity: number;
+  nameCake: string;
+  price: number;
+  image: string;
+  description: string;
+  category: Category;
+  create_at: string;
+}
+
 export default function Produk() {
   return (
     <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 justify-center">
