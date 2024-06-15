@@ -1,6 +1,6 @@
+"use client";
 import Image from "next/image";
-import Link from "next/link";
-
+import { motion } from "framer-motion";
 interface datatype {
   imgSrc: string;
   heading: string;
@@ -32,17 +32,29 @@ const Features = () => {
   return (
     <div className="bg-babyblue" id="features">
       <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <h3 className="text-4xl sm:text-5xl font-semibold text-black text-center my-10">
-          KEUNGGULAN KAMI
-        </h3>
-        <hr
-          style={{ border: "1px solid navy", color: "blue" }}
-          className=" mx-auto w-20  border-1 -mt-2"
-        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+        >
+          <h3 className="text-4xl sm:text-5xl font-semibold text-black text-center my-10">
+            KEUNGGULAN KAMI
+          </h3>
+          <hr
+            style={{ border: "1px solid navy", color: "blue" }}
+            className=" mx-auto w-20  border-1 -mt-2"
+          />
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-4 lg:gap-x-8 mt-10">
           {Aboutdata.map((item, i) => (
-            <div key={i} className="bg-white rounded-2xl p-5 featureShadow">
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.1, ease: "easeInOut" }}
+              key={i}
+              className="bg-white rounded-2xl p-5 featureShadow"
+            >
               <Image
                 src={item.imgSrc}
                 alt={item.imgSrc}
@@ -59,7 +71,7 @@ const Features = () => {
               <br />
               <br />
               <br />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
