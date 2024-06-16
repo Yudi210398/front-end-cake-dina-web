@@ -1,6 +1,6 @@
 import Image from "next/image";
-
 import { Archivo_Black } from "next/font/google";
+import { useHttp } from "../components/util/http-hook";
 
 const arvhivo = Archivo_Black({ weight: "400", subsets: ["latin"] });
 
@@ -21,6 +21,15 @@ interface Datakue {
 }
 
 export default function Produk() {
+  // const [users, setUsers] = useState([]);
+
+  // useEffect(() => {
+  //   fetch("http://localhost:3001/cake")
+  //     .then((response) => response.json())
+  //     .then((data) => setUsers(data))
+  //     .catch((error) => console.error("Error fetching users:", error));
+  // }, []);
+
   return (
     <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 justify-center">
       <hr
