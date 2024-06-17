@@ -22,7 +22,7 @@ export function useHttp() {
         throw err.message;
       }
     },
-    []
+    [],
   );
   return {
     errorValidate,

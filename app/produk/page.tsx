@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { Archivo_Black } from "next/font/google";
 import { useHttp } from "../components/util/http-hook";
+import { useEffectProduct } from "../components/util/http-get-all-Product";
 
 const arvhivo = Archivo_Black({ weight: "400", subsets: ["latin"] });
 
@@ -21,6 +24,7 @@ interface Datakue {
 }
 
 export default function Produk() {
+  const { getData } = useEffectProduct();
   // const [users, setUsers] = useState([]);
 
   // useEffect(() => {
