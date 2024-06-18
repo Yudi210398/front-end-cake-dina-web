@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { Archivo_Black } from "next/font/google";
 import { useHttp } from "../components/util/http-hook";
@@ -25,14 +24,6 @@ interface Datakue {
 
 export default function Produk() {
   const { getData } = useEffectProduct();
-  // const [users, setUsers] = useState([]);
-
-  // useEffect(() => {
-  //   fetch("http://localhost:3001/cake")
-  //     .then((response) => response.json())
-  //     .then((data) => setUsers(data))
-  //     .catch((error) => console.error("Error fetching users:", error));
-  // }, []);
 
   return (
     <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 justify-center">
@@ -55,8 +46,8 @@ export default function Produk() {
             <a href="#">
               <Image
                 className="rounded-t-lg"
-                src="/assets/cake/Resep-Kue-Cucur-Gula-Merah-Anti-Gagal-Dijamin-Legit-Bikin-Ketagihan-1024x678.jpg"
-                alt=""
+                src={getData[0]?.image}
+                alt="data"
                 width={800}
                 height={200}
               />
