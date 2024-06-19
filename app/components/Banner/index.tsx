@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 const Banner = () => {
   return (
     <div className="bg-header">
@@ -18,9 +18,11 @@ const Banner = () => {
               <Image
                 src="/assets/banner/star.svg"
                 alt="star-image"
-                width={95}
-                height={97}
+                width={0}
+                height={0}
+                sizes="100vw"
                 className="absolute top-[-74px] right-[80px]"
+                style={{ width: "100px", height: "auto" }}
               />
               <h1 className=" text-white  text-4xl md:text-85xl text-center lg:text-start font-semibold lh-133 pt-5">
                 Kue Istimewa Untuk Momen Istimewa.
@@ -32,10 +34,14 @@ const Banner = () => {
                 menggugah selera. Segera pesan dan nikmati kelezatan yang kami
                 tawarkan!
               </h3>
-              <div className="pt-8 mx-auto lg:mx-0">
-                <button className="text-white text-xl font-medium py-6 px-12 rounded-full transition duration-150 ease-in-out bg-dodgerblue hover:text-white hover:bg-blue">
+
+              <div className="pt-24 mx-auto lg:mx-0">
+                <Link
+                  href={"/produk"}
+                  className="text-white text-xl font-medium py-6 px-12 rounded-full transition duration-150 ease-in-out bg-dodgerblue hover:text-white hover:bg-blue"
+                >
                   Lihat Produk
-                </button>
+                </Link>
                 <br />
               </div>
             </motion.div>

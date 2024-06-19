@@ -1,8 +1,24 @@
 import { useState, useEffect } from "react";
 import { useHttp } from "./http-hook";
+
+enum Category {
+  KUE_KERING = "KUE_KERING",
+  KUE_BASAH = "KUE_BASAH",
+}
+
+export interface Datakue {
+  quantity?: number;
+  nameCake: string;
+  price?: number;
+  image: string;
+  description?: string;
+  category?: Category;
+  create_at?: string;
+}
+
 export function useEffectProduct() {
   const { sendRequest } = useHttp();
-  const [getData, setGetData] = useState([]);
+  const [getData, setGetData] = useState<Datakue[]>([]);
 
   try {
     useEffect(() => {
