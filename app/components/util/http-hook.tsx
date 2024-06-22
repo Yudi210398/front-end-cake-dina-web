@@ -13,9 +13,9 @@ export function useHttp() {
           headers,
         });
         const responseData = await response.json();
-        if (!response.ok || response.status === 500) {
-          throw new Error(responseData.error?.pesan);
-        }
+        if (!response.ok || response.status === 500)
+          throw new Error(responseData.error);
+
         return responseData;
       } catch (err: any) {
         setPesanVerify(err.message);

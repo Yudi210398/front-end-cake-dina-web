@@ -5,12 +5,12 @@ import { Archivo_Black } from "next/font/google";
 
 import { useEffectProduct } from "../components/util/http-get-all-Product";
 import IndexProduct from "../components/produks";
-import { Suspense } from "react";
+import { ReactElement, Suspense } from "react";
 
 const arvhivo = Archivo_Black({ weight: "400", subsets: ["latin"] });
 
 export default function Produk() {
-  const { getData } = useEffectProduct();
+  const { getData, pesanVerify } = useEffectProduct();
 
   return (
     <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 justify-center">
@@ -26,7 +26,7 @@ export default function Produk() {
           SEMUA KUE
         </span>
       </div>
-      {getData.length === 0 ? (
+      {getData.length === 0 && !pesanVerify ? (
         <div className="container py-10 px-10 mx-0 min-w-full flex flex-col items-center">
           <button
             disabled
@@ -56,7 +56,12 @@ export default function Produk() {
       ) : (
         ""
       )}
-      <Suspense fallback={<p>Loading</p>}>
+      {pesanVerify && (
+        <p className="text-center">
+          Data / Routing Tidak bisa di fetch atau {pesanVerify}
+        </p>
+      )}
+      <Suspense fallback={<p className="text-center mt-20">Loading</p>}>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

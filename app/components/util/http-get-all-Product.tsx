@@ -17,23 +17,23 @@ export interface Datakue {
 }
 
 export function useEffectProduct() {
-  const { sendRequest } = useHttp();
+  const { sendRequest, pesanVerify } = useHttp();
   const [getData, setGetData] = useState<Datakue[]>([]);
-
   try {
     useEffect(() => {
       const fetch = async () => {
         const hasil = await sendRequest(`http://localhost:3001/cake`);
-
         await setGetData(hasil || []);
         return hasil;
       };
       fetch();
     }, [sendRequest]);
   } catch (err: any) {
+    console.log(`cejs`);
     throw err.message;
   }
   return {
     getData,
+    pesanVerify,
   };
 }
