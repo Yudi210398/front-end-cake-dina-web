@@ -11,6 +11,7 @@ const arvhivo = Archivo_Black({ weight: "400", subsets: ["latin"] });
 
 export default function Produk() {
   const { getData, pesanVerify } = useEffectProduct();
+  console.log(getData, `kocak`);
 
   return (
     <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 justify-center">
@@ -69,7 +70,12 @@ export default function Produk() {
           className="grid gap-10 grid-cols-2 lg:gap-10 mt-20 lg:grid-cols-3"
         >
           {getData.map((data, i) => (
-            <IndexProduct key={i} nameCake={data.nameCake} image={data.image} />
+            <IndexProduct
+              key={i}
+              nameCake={data.nameCake}
+              image={data.image}
+              id={data.id}
+            />
           ))}
         </motion.div>
       </Suspense>

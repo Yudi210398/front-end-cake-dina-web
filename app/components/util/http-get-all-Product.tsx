@@ -7,6 +7,7 @@ enum Category {
 }
 
 export interface Datakue {
+  id?: number;
   quantity?: number;
   nameCake: string;
   price?: number;
@@ -29,7 +30,6 @@ export function useEffectProduct() {
       fetch();
     }, [sendRequest]);
   } catch (err: any) {
-    console.log(`cejs`);
     throw err.message;
   }
   return {
