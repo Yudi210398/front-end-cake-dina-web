@@ -58,7 +58,7 @@ const footer = () => {
                 style={{ fontSize: "30px", color: "#FFFFFF" }}
                 className={lucky.className}
               >
-                DINA CAKE
+                SEPTEMBER CAKE
               </h1>
             </div>
           </div>

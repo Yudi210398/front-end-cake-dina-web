@@ -52,7 +52,7 @@ const Navbar = () => {
                   style={{ fontSize: "30px", color: "#2974ae" }}
                   className={lucky.className}
                 >
-                  DINA CAKE
+                  SEPTEMBER CAKE
                 </h1>
               </div>
 
