@@ -1,21 +1,28 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Datakue } from "../util/http-get-all-Product";
 import Link from "next/link";
+import ModalProduck from "./modal";
 
-const IndexProduct: React.FC<Datakue> = ({ nameCake, image, id }) => {
+const IndexProduct: React.FC<Datakue> = ({
+  nameCake,
+  image,
+  id,
+  description,
+}) => {
+  const [data, setData] = useState<string | undefined>("hidden");
   return (
     <div className=" bg-black-500 aspect-square rounded-lg  justify-center">
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <Link href={`/produk/${id}`}>
-          <Image
-            className="rounded-t-lg"
-            src={image}
-            alt="data"
-            width={800}
-            height={200}
-          />
-        </Link>
+        <Image
+          onClick={() => setData("")}
+          className="rounded-t-lg hover:cursor-pointer"
+          src={image}
+          alt="data"
+          width={800}
+          height={200}
+        />
+
         <div className="p-5">
           <Link href={`/produk/${id}`}>
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -46,6 +53,14 @@ const IndexProduct: React.FC<Datakue> = ({ nameCake, image, id }) => {
           </Link>
         </div>
       </div>
+      {/* modal */}
+      <ModalProduck
+        data={data}
+        setData={setData}
+        description={description}
+        nameCake={nameCake}
+        image={image}
+      />
     </div>
   );
 };

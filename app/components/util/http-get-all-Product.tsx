@@ -7,6 +7,9 @@ enum Category {
 }
 
 export interface Datakue {
+  data?: string;
+  setData?: React.Dispatch<React.SetStateAction<string | undefined>>;
+
   id?: number;
   quantity?: number;
   nameCake: string;

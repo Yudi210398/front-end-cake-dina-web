@@ -5,13 +5,12 @@ import { Archivo_Black } from "next/font/google";
 
 import { useEffectProduct } from "../components/util/http-get-all-Product";
 import IndexProduct from "../components/produks";
-import { ReactElement, Suspense } from "react";
+import { Suspense } from "react";
 
 const arvhivo = Archivo_Black({ weight: "400", subsets: ["latin"] });
 
 export default function Produk() {
   const { getData, pesanVerify } = useEffectProduct();
-  console.log(getData, `kocak`);
 
   return (
     <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 justify-center">
@@ -75,6 +74,7 @@ export default function Produk() {
               nameCake={data.nameCake}
               image={data.image}
               id={data.id}
+              description={data.description}
             />
           ))}
         </motion.div>
