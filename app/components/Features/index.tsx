@@ -49,8 +49,8 @@ const Features = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-4 lg:gap-x-8 mt-10">
           {Aboutdata.map((item, i) => (
             <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ rotate: -180, scale: 0 }}
+              whileInView={{ rotate: 0, scale: 1 }}
               transition={{ duration: 1, delay: 0.1, ease: "easeInOut" }}
               key={i}
               className="bg-white rounded-2xl p-5 featureShadow"

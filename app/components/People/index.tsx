@@ -4,6 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+async function getData() {
+  const res = await fetch("http://localhost:3001/cake/kuetrue");
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
 interface dataCake {
   name: string;
   image: string;
@@ -27,7 +40,10 @@ const kueData: dataCake[] = [
   },
 ];
 
-const People = () => {
+// eslint-disable-next-line @next/next/no-async-client-component
+const People = async () => {
+  const data = await getData();
+  console.log(data, `uhuy`);
   return (
     <div id="product">
       <div className="mx-auto mt-14 max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 justify-center">
