@@ -5,6 +5,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #f2f6fa !important;
 }
 
 html {
@@ -35,7 +36,7 @@ html:not([data-scroll="0"]) .ttty {
   background-size: cover;
 }
 .bg-navbar {
-  background: rgba(255, 255, 255, 0.9);
+  background: #f2f6fa;
 }
 
 .w-270px {

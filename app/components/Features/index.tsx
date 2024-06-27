@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
+import { Bad_Script } from "next/font/google";
 import { motion } from "framer-motion";
 interface datatype {
   imgSrc: string;
   heading: string;
   paragraph: string;
 }
-
+const bad = Bad_Script({ weight: ["400"], subsets: ["cyrillic"] });
 const Aboutdata: datatype[] = [
   {
     imgSrc: "/assets/features/time.svg",
@@ -37,9 +38,11 @@ const Features = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
         >
-          <h3 className="text-4xl sm:text-5xl font-semibold text-black text-center my-10">
+          <h4
+            className={`${bad.className} text-4xl sm:text-5xl font-semibold text-black text-center my-10`}
+          >
             KEUNGGULAN KAMI
-          </h3>
+          </h4>
           <hr
             style={{ border: "1px solid navy", color: "blue" }}
             className=" mx-auto w-20  border-1 -mt-2"

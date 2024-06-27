@@ -5,7 +5,7 @@ import Title from "./title";
 export interface dataCake {
   nameCake: string;
   image: string;
-  category?: string;
+  description?: string;
 }
 
 async function getData(): Promise<dataCake[]> {
@@ -30,11 +30,11 @@ const People = async () => {
         <Title />
         <div className="grid gap-10 grid-cols-2 lg:gap-10 mt-20 lg:grid-cols-3">
           {datas.map((data, i: number) => {
-            console.log(data.nameCake);
             return (
               <GetdataUtama
                 nameCake={data?.nameCake}
                 image={data?.image}
+                description={data.description}
                 key={i}
               />
             );
