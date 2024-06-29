@@ -39,6 +39,7 @@ const Features = () => {
           transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
         >
           <h4
+            style={{ fontSize: "35px", fontStyle: "oblique" }}
             className={`${bad.className} text-4xl sm:text-5xl font-semibold text-black text-center my-10`}
           >
             KEUNGGULAN KAMI
@@ -48,9 +49,19 @@ const Features = () => {
             className=" mx-auto w-20  border-1 -mt-2"
           />
         </motion.div>
+        <br />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-16 gap-y-4 lg:gap-x-8 mt-10">
+          <Image
+            alt={"data"}
+            src={"/assets/cake/bc8a7899b1.png"}
+            width={"800"}
+            height={"800"}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="mb-2"
+            style={{ width: 1000, borderRadius: "12px" }}
+          />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-4 lg:gap-x-8 mt-10">
-          {Aboutdata.map((item, i) => (
+          {/* {Aboutdata.map((item, i) => (
             <motion.div
               initial={{ rotate: -180, scale: 0 }}
               whileInView={{ rotate: 0, scale: 1 }}
@@ -75,7 +86,7 @@ const Features = () => {
               <br />
               <br />
             </motion.div>
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
