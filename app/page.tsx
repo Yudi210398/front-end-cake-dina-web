@@ -6,7 +6,6 @@ import Payment from "./components/Payment/index";
 import Pricing from "./components/Pricing/index";
 
 export default function Home() {
-  console.log(`data`);
   return (
     <main>
       <Banner />

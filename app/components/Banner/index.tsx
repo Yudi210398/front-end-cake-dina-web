@@ -27,7 +27,15 @@ const Banner = () => {
               <h1 className=" text-white  text-4xl md:text-85xl text-center lg:text-start font-semibold lh-133 pt-5">
                 Kue Istimewa Untuk Momen Istimewa.
               </h1>
-              <h3 className=" text-grey500  opacity-75 text-lg font-normal text-center lg:text-justify pt-8">
+              <h3
+                style={{
+                  fontSize: 20,
+                  lineHeight: 1.8,
+                  color: "white",
+                  textAlign: "justify",
+                }}
+                className=" text-grey500  opacity-75 text-lg font-normal text-center lg:text-justify pt-8"
+              >
                 Kami berkomitmen untuk menghadirkan kue terbaik bagi Anda.
                 Setiap kue dibuat dengan perhatian dan dedikasi tinggi,
                 memastikan setiap potongan menawarkan rasa yang memuaskan dan

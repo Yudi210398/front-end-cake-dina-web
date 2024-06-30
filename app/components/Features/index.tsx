@@ -2,12 +2,16 @@
 import Image from "next/image";
 import { Bad_Script } from "next/font/google";
 import { motion } from "framer-motion";
+import { Sora } from "next/font/google";
+
+const sora = Sora({ weight: ["400"], subsets: ["latin"] });
+
 interface datatype {
   imgSrc: string;
   heading: string;
   paragraph: string;
 }
-const bad = Bad_Script({ weight: ["400"], subsets: ["cyrillic"] });
+export const bad = Bad_Script({ weight: ["400"], subsets: ["cyrillic"] });
 const Aboutdata: datatype[] = [
   {
     imgSrc: "/assets/features/time.svg",
@@ -31,7 +35,11 @@ const Aboutdata: datatype[] = [
 
 const Features = () => {
   return (
-    <div className="bg-babyblue" id="features">
+    <div
+      className="bg-babyblue"
+      id="features"
+      style={{ backgroundColor: "white" }}
+    >
       <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <motion.div
           initial={{ opacity: 0 }}
@@ -51,15 +59,50 @@ const Features = () => {
         </motion.div>
         <br />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-16 gap-y-4 lg:gap-x-8 mt-10">
-          <Image
-            alt={"data"}
-            src={"/assets/cake/bc8a7899b1.png"}
-            width={"800"}
-            height={"800"}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="mb-2"
-            style={{ width: 1000, borderRadius: "12px" }}
-          />
+          <motion.div
+            initial={{ x: -200 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1, ease: "easeIn" }}
+          >
+            <Image
+              alt={"data"}
+              src={"/assets/cake/karenaa.jpg"}
+              width={"800"}
+              height={"800"}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="mb-2"
+              style={{ width: 1000, borderRadius: "12px" }}
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ x: 180 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1, ease: "easeIn" }}
+            className="data sm:pt-32"
+          >
+            <h1
+              className={`${sora.className} text-balck  text-base md:base   font-semibold  pt-5`}
+              style={{
+                fontSize: 35,
+                fontWeight: "bold",
+                lineHeight: 1.6,
+              }}
+            >
+              Kelezatan Sejati: Kue Alami Tanpa Pengawet
+            </h1>
+            <br />
+            <hr />
+            <br />
+            <p style={{ textAlign: "justify", fontSize: 20, lineHeight: 1.8 }}>
+              Rasakan kebaikan murni dari setiap gigitan! Kue kami tidak hanya
+              menggoda lidah dengan rasa yang otentik, tetapi juga memberikan
+              kepuasan hati dengan bahan-bahan alami pilihan. Dibuat tanpa
+              pengawet, setiap sentuhan tangan kami adalah cinta untuk kualitas
+              dan kesegaran yang tak tertandingi. Hadirkan kelezatan sejati
+              untuk menghadirkan kebahagiaan dalam setiap momen istimewa Anda!
+            </p>
+          </motion.div>
 
           {/* {Aboutdata.map((item, i) => (
             <motion.div
