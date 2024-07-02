@@ -38,7 +38,7 @@ function classNames(...classes: string[]) {
 
 const Navbar = () => {
   const navActice = usePathname();
-  console.log(navActice, `kcoak`);
+
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -68,7 +68,7 @@ const Navbar = () => {
                         item.current
                           ? " text-black hover:opacity-75"
                           : "hover:text-black hover:opacity-75",
-                        "px-3 py-4 text-lg font-normal text-black space-links",
+                        "px-3 py-4 text-lg font-normal text-black space-links"
                       )}
                       aria-current={item.href ? "page" : undefined}
                     >
@@ -89,11 +89,11 @@ const Navbar = () => {
 
             {/* SIGNIN DIALOG */}
 
-            <Signdialog />
+            {/* <Signdialog /> */}
 
             {/* REGISTER DIALOG */}
 
-            <Registerdialog />
+            {/* <Registerdialog /> */}
 
             {/* DRAWER FOR MOBILE VIEW */}
 
@@ -101,7 +101,7 @@ const Navbar = () => {
 
             <div className="block lg:hidden">
               <Bars3Icon
-                className="block h-6 w-6"
+                className="block h-6 w-6 cursor-pointer"
                 aria-hidden="true"
                 onClick={() => setIsOpen(true)}
               />

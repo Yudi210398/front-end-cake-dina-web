@@ -8,9 +8,11 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: "Product", href: "#product", current: true },
-  { name: "Pricing", href: "#pricing", current: false },
-  { name: "Features", href: "#features", current: false },
+  { name: "Beranda", href: "/", current: false },
+  { name: "Produk", href: "/produk", current: true },
+
+  { name: "Berita", href: "#features", current: false },
+  { name: "Tentang", href: "#features", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -31,7 +33,7 @@ const Data = () => {
                   item.current
                     ? "text-black hover:opacity-100"
                     : "hover:text-black hover:opacity-100",
-                  "px-2 py-1 text-lg font-normal opacity-75 block",
+                  "px-2 py-1 text-lg font-normal opacity-75 block"
                 )}
                 aria-current={item.current ? "page" : undefined}
               >
@@ -39,12 +41,12 @@ const Data = () => {
               </Link>
             ))}
             <div className="mt-4"></div>
-            <button className="bg-white w-full text-midnightblue border border-midnightblue font-medium py-2 px-4 rounded">
+            {/* <button className="bg-white w-full text-midnightblue border border-midnightblue font-medium py-2 px-4 rounded">
               Log In
             </button>
             <button className="bg-midnightblue w-full hover:bg-blue hover:text-white text-white font-medium my-2 py-2 px-4 rounded">
               Sign up
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
