@@ -34,6 +34,7 @@ html:not([data-scroll="0"]) .ttty {
   background-image: url("https://res.cloudinary.com/dymv3cmhq/image/upload/v1719731415/dummy/c0ejrujyrzvuyhhcr6ez.png");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 .bg-navbar {
   background: #f2f6fa;

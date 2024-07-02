@@ -58,7 +58,7 @@ const Features = () => {
           />
         </motion.div>
         <br />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-16 gap-y-4 lg:gap-x-8 mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-4 lg:gap-x-8 mt-10">
           <motion.div
             initial={{ x: -200 }}
             whileInView={{ x: 0 }}
@@ -79,7 +79,7 @@ const Features = () => {
             initial={{ x: 180 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 1, ease: "easeIn" }}
-            className="data sm:pt-32"
+            className="data lg:pt-32 sm:pt-19"
           >
             <h1
               className={`${sora.className} text-balck  text-base md:base   font-semibold  pt-5`}
