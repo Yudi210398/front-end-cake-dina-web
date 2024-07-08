@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
+import WhatsappIcon from "./components/whatsapp";
 
 export const metadata = {
   title: "Paidin",
@@ -16,6 +17,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
+        <WhatsappIcon />
+
         {children}
         <Footer />
       </body>
