@@ -28,8 +28,6 @@ interface NavigationItem {
 const navigation: NavigationItem[] = [
   { name: "Beranda", href: "/", current: true },
   { name: "Produk", href: "/produk", current: false },
-  { name: "Berita", href: "#features", current: false },
-  { name: "Kontak", href: "#features", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -58,7 +56,7 @@ const Navbar = () => {
 
               {/* LINKS */}
 
-              <div className="hidden lg:block ml-20">
+              <div className="hidden lg:block ml-36">
                 <div className="flex space-x-4">
                   {navigation.map((item) => (
                     <Link

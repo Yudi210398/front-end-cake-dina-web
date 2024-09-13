@@ -21,7 +21,6 @@ const Banner = () => {
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="absolute top-[-74px] right-[80px]"
                 style={{ width: "100px", height: "auto" }}
               />
               <h1 className=" text-white  text-4xl md:text-85xl text-center lg:text-start font-semibold lh-133 pt-5">

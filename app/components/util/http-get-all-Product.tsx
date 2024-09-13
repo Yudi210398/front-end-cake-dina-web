@@ -26,7 +26,7 @@ export function useEffectProduct() {
   try {
     useEffect(() => {
       const fetch = async () => {
-        const hasil = await sendRequest(`http://localhost:3001/cake`);
+        const hasil = await sendRequest(`https://yudi.fra3yan.com/cake`);
         await setGetData(hasil || []);
         return hasil;
       };
