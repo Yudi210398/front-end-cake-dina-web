@@ -1,6 +1,7 @@
 import Link from "next/link";
 import GetdataUtama from "./getData";
 import Title from "./title";
+import { ALLKue } from "@/app/data/kueData";
 
 export interface dataCake {
   nameCake: string;
@@ -8,23 +9,23 @@ export interface dataCake {
   description?: string;
 }
 
-async function getData(): Promise<dataCake[]> {
-  const res = await fetch("http://localhost:3001/cake/kuetrue");
+// async function getData(): Promise<dataCake[]> {
+//   const res = await fetch("http://localhost:3001/cake/kuetrue");
 
-  if (!res.ok) throw new Error("Failed to fetch data");
+//   if (!res.ok) throw new Error("Failed to fetch data");
 
-  return res.json();
-}
+//   return res.json();
+// }
 
 const People = async () => {
-  const datas = await getData();
+  // const datas = await getData();
 
   return (
     <div id="product">
       <div className="mx-auto  max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 justify-center">
         <Title />
         <div className="grid gap-10 grid-cols-2 lg:gap-10 mt-20 lg:grid-cols-3">
-          {datas.map((data, i: number) => {
+          {ALLKue.map((data, i: number) => {
             return (
               <GetdataUtama
                 nameCake={data?.nameCake}

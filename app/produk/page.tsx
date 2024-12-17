@@ -6,12 +6,11 @@ import { Archivo_Black } from "next/font/google";
 import { useEffectProduct } from "../components/util/http-get-all-Product";
 import IndexProduct from "../components/produks";
 import { Suspense } from "react";
+import { ALLKue } from "../data/kueData";
 
 const arvhivo = Archivo_Black({ weight: "400", subsets: ["latin"] });
 
 export default function Produk() {
-  const { getData, pesanVerify } = useEffectProduct();
-
   return (
     <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8 justify-center">
       <hr
@@ -26,7 +25,7 @@ export default function Produk() {
           SEMUA KUE
         </span>
       </div>
-      {getData.length === 0 && !pesanVerify ? (
+      {ALLKue.length === 0 ? (
         <div className="container py-10 px-10 mx-0 min-w-full flex flex-col items-center">
           <button
             disabled
@@ -56,11 +55,7 @@ export default function Produk() {
       ) : (
         ""
       )}
-      {pesanVerify && (
-        <p className="text-center">
-          Data / Routing Tidak bisa di fetch atau {pesanVerify}
-        </p>
-      )}
+
       <Suspense fallback={<p className="text-center mt-20">Loading</p>}>
         <motion.div
           initial={{ opacity: 0 }}
@@ -68,7 +63,7 @@ export default function Produk() {
           transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
           className="grid gap-10 grid-cols-2 lg:gap-10 mt-20 lg:grid-cols-3"
         >
-          {getData.map((data, i) => (
+          {ALLKue.map((data, i) => (
             <IndexProduct
               key={i}
               nameCake={data.nameCake}
