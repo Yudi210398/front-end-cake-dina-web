@@ -4,10 +4,7 @@ import Link from "next/link";
 const WhatsappIcon = () => {
   const encodePesan = encodeURIComponent("Halo Saya Mau Pesan Kue");
   return (
-    <Link
-      target="_blank"
-      href={`https://wa.me/6281388155049?text=${encodePesan}`}
-    >
+    <a target="_blank" href={`https://wa.me/6281388155049?text=${encodePesan}`}>
       <Image
         src="/assets/logo/was.png"
         alt="whatsapp"
@@ -23,7 +20,7 @@ const WhatsappIcon = () => {
           cursor: "pointer",
         }}
       />
-    </Link>
+    </a>
   );
 };
 
